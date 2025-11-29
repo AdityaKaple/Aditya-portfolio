@@ -104,3 +104,50 @@ function updateActiveNavLink() {
     }
   });
 }
+// ===== Contact Form: Web3Forms submit + success toast =====
+const contactForm = document.querySelector(".contact-form");
+const toastEl = document.getElementById("toast");
+const toastMsgEl = document.getElementById("toast-message");
+
+function showToast(message) {
+  if (!toastEl || !toastMsgEl) return;
+  toastMsgEl.textContent = message;
+  toastEl.classList.add("show");
+  setTimeout(() => {
+    toastEl.classList.remove("show");
+  }, 3000);
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+
+    // Button loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      const formData = new FormData(contactForm);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        showToast("Message sent successfully!");
+        contactForm.reset();
+      } else {
+        showToast("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      showToast("Network error. Please try again.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+}
