@@ -68,7 +68,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+   <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="card fade-in">
       <h2 class="section-heading">
@@ -80,16 +80,17 @@
         Drop me a message below:
       </p>
 
-      <form action="https://formsubmit.co/adityakaple9@gmail.com" method="POST" class="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  <button type="submit" class="submit-btn">Send Message</button>
-</form>
+      <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <!-- Web3Forms access key -->
+        <input type="hidden" name="access_key" value="b5a49312-4388-4ee8-87c2-b1fab49475d0">
 
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Optional: redirect back to your site after success -->
+        <input type="hidden" name="redirect" value="https://adityakaple.github.io/#contact">
+
         <button type="submit" class="submit-btn">Send Message</button>
       </form>
     </div>
