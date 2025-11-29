@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Kaple</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-theme="light" class="spotlight">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">Aditya Kaple</div>
+    <nav>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- iOS-style Dark/Light Toggle -->
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle" />
+      <span class="slider"></span>
+      <span class="switch-label">Dark</span>
+    </label>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content fade-in hero-parallax">
+      <img src="aditya.jpeg" class="profile-photo" alt="Aditya Kaple">
+
+      <h1 class="hero-title">
+        Hello, I'm <span>Aditya Kaple</span>
+      </h1>
+      <p class="hero-subtext">
+        IT Diploma Student (Amrutvahini Polytechnic, Sangamner)<br />
+        Java Developer • Python Programmer • Cloud & AI Enthusiast
+      </p>
+
+      <div class="status-pill">Open to opportunities</div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="card fade-in">
+      <h2 class="section-heading">
+        About Me
+        <span class="heading-underline"></span>
+      </h2>
+      <p>
+        I am an Information Technology diploma student known for strong technical skills,
+        a disciplined work ethic, and consistently excellent academic performance
+        (no KTs and strong pointers).
+        <br><br>
+        I completed a <b>3-month internship at Innovatus Technologies</b> working with
+        <b>Java, SQL, Cloud Computing, Python, AI and Machine Learning</b>.
+        <br><br>
+        I enjoy building clean, modern and practical software, applying classroom concepts
+        to real-world solutions with a growing focus on cloud engineering and AI/ML.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="card fade-in">
+      <h2 class="section-heading">
+        Contact Me
+        <span class="heading-underline"></span>
+      </h2>
+      <p class="contact-text">
+        Want to connect for internships, projects or opportunities?<br />
+        Drop me a message below:
+      </p>
+
+      <form action="https://formsubmit.co/adityakaple9@gmail.com" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button class="back-to-top" id="back-to-top">⌃</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
